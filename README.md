@@ -72,8 +72,9 @@ Track.where(album: "Let There Be Rock").each {|a| puts a.title}
 ```ruby
 Track.where(album: "Let There Be Rock").map {|a| a.price}.sum
 ```
-Calcule le coût de l'intégralité de la discographie de "Deep Purple".
+* Calcule le coût de l'intégralité de la discographie de "Deep Purple".
 Modifie (via une boucle) tous les titres de "Eric Clapton" afin qu'ils soient affichés avec "Britney Spears" en artist.
-
-
+```ruby
+Track.where(artist: "Eric Clapton").map {|a| puts a.update(artist: "Britney Spears")}
+```
 * ...
